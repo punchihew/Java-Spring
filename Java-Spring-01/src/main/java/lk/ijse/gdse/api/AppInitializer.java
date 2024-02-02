@@ -1,5 +1,6 @@
 package lk.ijse.gdse.api;
 
+import lk.ijse.gdse.api.bean.SpringBean;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 
 public class AppInitializer {
@@ -11,5 +12,8 @@ public class AppInitializer {
          //context eke athule dewal access karanna puluwan
          AppConfig bean = acx.getBean(AppConfig.class);
          System.out.println(bean);
+
+        SpringBean bean1 = acx.getBean(SpringBean.class);
+        System.out.println(bean1);
     }
 }

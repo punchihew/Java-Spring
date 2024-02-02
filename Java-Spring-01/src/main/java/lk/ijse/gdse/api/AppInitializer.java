@@ -9,11 +9,14 @@ public class AppInitializer {
          acx.register(AppConfig.class);
          acx.refresh();
 
+
          //context eke athule dewal access karanna puluwan
          AppConfig bean = acx.getBean(AppConfig.class);
          System.out.println(bean);
 
         SpringBean bean1 = acx.getBean(SpringBean.class);
         System.out.println(bean1);
+
+        acx.close();//applicationContext shutdown context
     }
 }

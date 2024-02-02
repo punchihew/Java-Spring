@@ -1,4 +1,11 @@
 package lk.ijse.gdse.api;
 
-public class Hello_Spring {
+import org.springframework.context.annotation.AnnotationConfigApplicationContext;
+
+public class AppInitializer {
+    public static void main(String[] args) {
+         AnnotationConfigApplicationContext acx = new AnnotationConfigApplicationContext();
+         acx.register(AppConfig.class);
+         acx.refresh();
+    }
 }

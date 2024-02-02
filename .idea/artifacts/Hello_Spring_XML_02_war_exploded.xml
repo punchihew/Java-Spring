@@ -11,13 +11,13 @@
     <root id="root">
       <element id="directory" name="WEB-INF">
         <element id="directory" name="classes">
-          <element id="module-output" name="Hello-Spring-XML-02" />
+          <element id="module-output" name="02-Hello-Spring-XML" />
         </element>
       </element>
       <element id="directory" name="META-INF">
-        <element id="file-copy" path="$PROJECT_DIR$/Hello-Spring-XML-02/target/Hello-Spring-XML-02-1.0-SNAPSHOT/META-INF/MANIFEST.MF" />
+        <element id="file-copy" path="$PROJECT_DIR$/02-Hello-Spring-XML/target/Hello-Spring-XML-02-1.0-SNAPSHOT/META-INF/MANIFEST.MF" />
       </element>
-      <element id="javaee-facet-resources" facet="Hello-Spring-XML-02/web/Web" />
+      <element id="javaee-facet-resources" facet="02-Hello-Spring-XML/web/Web" />
     </root>
   </artifact>
 </component>

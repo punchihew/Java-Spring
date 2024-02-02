@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/Hello-Spring-XML-02/Hello-Spring-XML-02.iml" filepath="$PROJECT_DIR$/Hello-Spring-XML-02/Hello-Spring-XML-02.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Hello-Spring-XML-02/02-Hello-Spring-XML.iml" filepath="$PROJECT_DIR$/Hello-Spring-XML-02/02-Hello-Spring-XML.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/JAVA-SPRING.iml" filepath="$PROJECT_DIR$/.idea/JAVA-SPRING.iml" />
       <module fileurl="file://$PROJECT_DIR$/Java-Spring-01/Java-Spring-01.iml" filepath="$PROJECT_DIR$/Java-Spring-01/Java-Spring-01.iml" />
     </modules>

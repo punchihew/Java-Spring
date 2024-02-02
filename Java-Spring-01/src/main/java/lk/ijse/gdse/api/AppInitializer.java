@@ -24,7 +24,9 @@ public class AppInitializer {
          AppConfig bean = acx.getBean(AppConfig.class);
          System.out.println(bean);
 
-         SpringBean bean1 = acx.getBean(SpringBean.class);
+        SpringBean springBean = (SpringBean) acx.getBean("SpringBean");
+
+        SpringBean bean1 = acx.getBean(SpringBean.class);
          System.out.println(bean1);
 
          SpringBean2 bean2 = acx.getBean(SpringBean2.class);

@@ -7,5 +7,9 @@ public class AppInitializer {
          AnnotationConfigApplicationContext acx = new AnnotationConfigApplicationContext();
          acx.register(AppConfig.class);
          acx.refresh();
+
+         //context eke athule dewal access karanna puluwan
+         AppConfig bean = acx.getBean(AppConfig.class);
+         System.out.println(bean);
     }
 }

@@ -1,4 +1,4 @@
-package lk.ijse.gdse.api.bean;
+package lk.ijse.gdse.api;
 
 
 import org.springframework.stereotype.Component;
@@ -7,6 +7,6 @@ import org.springframework.stereotype.Component;
 public class SpringBean3 {
 
     public SpringBean3() {
-        System.out.println("SpringThere instance is invoke");
+        System.out.println("Spring 3  instance is invoke");
     }
 }

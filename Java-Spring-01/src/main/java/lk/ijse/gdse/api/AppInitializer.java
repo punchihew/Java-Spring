@@ -29,11 +29,11 @@ public class AppInitializer {
 //        System.out.println(springBean);
 
         //change bean name
-        SpringBean sb = (SpringBean) acx.getBean("sb");
-        System.out.println(sb);
+//        SpringBean sb = (SpringBean) acx.getBean("sb");
+//        System.out.println(sb);
 
-        Object springbean3 = acx.getBean("springbean3");
-        System.out.println(springbean3);
+//        Object springbean3 = acx.getBean("springBean3");
+//        System.out.println(springbean3);
 
 //         SpringBean bean1 = acx.getBean(SpringBean.class);
 //         System.out.println(bean1);

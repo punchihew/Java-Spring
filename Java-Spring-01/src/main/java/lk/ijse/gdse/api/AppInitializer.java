@@ -32,6 +32,9 @@ public class AppInitializer {
         SpringBean sb = (SpringBean) acx.getBean("sb");
         System.out.println(sb);
 
+        Object springbean3 = acx.getBean("springbean3");
+        System.out.println(springbean3);
+
 //         SpringBean bean1 = acx.getBean(SpringBean.class);
 //         System.out.println(bean1);
 //

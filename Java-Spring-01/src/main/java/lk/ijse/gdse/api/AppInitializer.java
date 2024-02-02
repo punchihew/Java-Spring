@@ -8,12 +8,12 @@ public class AppInitializer {
     public static void main(String[] args) {
 
         //jvm eka shutdown unma thami acx eka close wenne
-        Runtime.getRuntime().addShutdownHook(new Thread(new Runnable(){
-            @Override
-            public void run() {
-                System.out.println(" JVM is about to shutdown");
-            }
-        }));
+//        Runtime.getRuntime().addShutdownHook(new Thread(new Runnable(){
+//            @Override
+//            public void run() {
+//                System.out.println(" JVM is about to shutdown");
+//            }
+//        }));
 
 
          AnnotationConfigApplicationContext acx = new AnnotationConfigApplicationContext();
@@ -31,6 +31,7 @@ public class AppInitializer {
          System.out.println(bean2);
 
 //        acx.close();//applicationContext shutdown context
+        acx.registerShutdownHook();//close context after shutdown JVM one moment
 
 
 

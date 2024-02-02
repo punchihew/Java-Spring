@@ -6,19 +6,6 @@ import org.springframework.context.annotation.AnnotationConfigApplicationContext
 
 public class AppInitializer {
     public static void main(String[] args) {
-         AnnotationConfigApplicationContext acx = new AnnotationConfigApplicationContext();
-         acx.register(AppConfig.class);
-         acx.refresh();
-
-
-         //context eke athule dewal access karanna puluwan
-         AppConfig bean = acx.getBean(AppConfig.class);
-         System.out.println(bean);
-
-        SpringBean bean1 = acx.getBean(SpringBean.class);
-        System.out.println(bean1);
-
-//        acx.close();//applicationContext shutdown context
 
         //jvm eka shutdown unma thami acx eka close wenne
         Runtime.getRuntime().addShutdownHook(new Thread(new Runnable(){
@@ -28,7 +15,26 @@ public class AppInitializer {
             }
         }));
 
-//        SpringBean2 bean2 = acx.getBean(SpringBean2.class);
-//        System.out.println(bean2);
+
+         AnnotationConfigApplicationContext acx = new AnnotationConfigApplicationContext();
+         acx.register(AppConfig.class);
+         acx.refresh();
+
+         //context eke athule dewal access karanna puluwan
+         AppConfig bean = acx.getBean(AppConfig.class);
+         System.out.println(bean);
+
+         SpringBean bean1 = acx.getBean(SpringBean.class);
+         System.out.println(bean1);
+
+         SpringBean2 bean2 = acx.getBean(SpringBean2.class);
+         System.out.println(bean2);
+
+//        acx.close();//applicationContext shutdown context
+
+
+
+
+
     }
 }

@@ -18,12 +18,13 @@ public class AppInitializer {
         SpringBean bean1 = acx.getBean(SpringBean.class);
         System.out.println(bean1);
 
-        acx.close();//applicationContext shutdown context
+//        acx.close();//applicationContext shutdown context
 
+        //jvm eka shutdown unma thami acx eka close wenne
         Runtime.getRuntime().addShutdownHook(new Thread(new Runnable(){
             @Override
             public void run() {
-                System.out.println("Runnable Method");
+                System.out.println(" JVM is about to shutdown");
             }
         }));
 

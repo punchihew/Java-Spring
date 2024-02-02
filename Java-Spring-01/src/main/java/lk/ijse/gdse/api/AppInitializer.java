@@ -21,22 +21,28 @@ public class AppInitializer {
          acx.refresh();
 
          //context eke athule dewal access karanna puluwan
-         AppConfig bean = acx.getBean(AppConfig.class);
-         System.out.println(bean);
+//         AppConfig bean = acx.getBean(AppConfig.class);
+//         System.out.println(bean);
 
-        SpringBean springBean = (SpringBean) acx.getBean("SpringBean");
+        //using annoation
+//        SpringBean springBean = (SpringBean) acx.getBean("springBean");
+//        System.out.println(springBean);
 
-        SpringBean bean1 = acx.getBean(SpringBean.class);
-         System.out.println(bean1);
+        //change bean name
+        SpringBean sb = (SpringBean) acx.getBean("sb");
+        System.out.println(sb);
 
-         SpringBean2 bean2 = acx.getBean(SpringBean2.class);
-         System.out.println(bean2);
-
-         acx.close();
-
-        System.out.println(acx);
-        System.out.println(bean1);
-        bean1.myMethoad();
+//         SpringBean bean1 = acx.getBean(SpringBean.class);
+//         System.out.println(bean1);
+//
+//         SpringBean2 bean2 = acx.getBean(SpringBean2.class);
+//         System.out.println(bean2);
+//
+//         acx.close();
+//
+//        System.out.println(acx);
+//        System.out.println(bean1);
+//        bean1.myMethoad();
 
 //        acx.close();//applicationContext shutdown context
 //        acx.registerShutdownHook();//close context after shutdown JVM one moment

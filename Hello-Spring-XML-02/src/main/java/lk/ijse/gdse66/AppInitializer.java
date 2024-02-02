@@ -1,27 +1,14 @@
 package lk.ijse.gdse66;
 
-import java.io.*;
-import javax.servlet.http.*;
-import javax.servlet.annotation.*;
+import lk.ijse.gdse66.bean.SpringBean;
+import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 
-@WebServlet(name = "helloServlet", value = "/hello-servlet")
-public class AppInitializer extends HttpServlet {
-    private String message;
+public class AppInitializer {
+    public static void main(String[] args) {
+        AnnotationConfigApplicationContext act = new AnnotationConfigApplicationContext("context.xml");
+        act.register(SpringBean.class);
+        SpringBean bean = act.getBean(SpringBean.class);
+        System.out.println(bean);
 
-    public void init() {
-        message = "Hello World!";
-    }
-
-    public void doGet(HttpServletRequest request, HttpServletResponse response) throws IOException {
-        response.setContentType("text/html");
-
-        // Hello
-        PrintWriter out = response.getWriter();
-        out.println("<html><body>");
-        out.println("<h1>" + message + "</h1>");
-        out.println("</body></html>");
-    }
-
-    public void destroy() {
     }
 }

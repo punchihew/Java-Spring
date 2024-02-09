@@ -6,6 +6,6 @@ import org.springframework.stereotype.Component;
 public class SpringBean2 {
 
     public SpringBean2() {
-        System.out.println(" springBean2 instance is create ");
+        System.out.println(" springBean 2 instance is create ");
     }
 }

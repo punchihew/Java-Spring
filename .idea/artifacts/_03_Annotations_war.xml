@@ -1,0 +1,14 @@
+<component name="ArtifactManager">
+  <artifact type="war" name="_03-Annotations:war">
+    <output-path>$PROJECT_DIR$/_03-Annotations/target</output-path>
+    <properties id="maven-jee-properties">
+      <options>
+        <module>_03-Annotations</module>
+        <packaging>war</packaging>
+      </options>
+    </properties>
+    <root id="archive" name="_03-Annotations-1.0-SNAPSHOT.war">
+      <element id="artifact" artifact-name="_03-Annotations:war exploded" />
+    </root>
+  </artifact>
+</component>

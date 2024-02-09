@@ -8,9 +8,10 @@ import org.springframework.stereotype.Component;
 @Component("sb")
 public class SpringBean {
     public SpringBean() {
-        System.out.println("Is springBean instance is create ");
+        System.out.println(" springBean 1 instance is create ");
     }
-    public void myMethoad(){
-        System.out.println("Calling My Method is invoke");
-    }
+
+//    public void myMethoad(){
+//        System.out.println("Calling My Method is invoke");
+//    }
 }

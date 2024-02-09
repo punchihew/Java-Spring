@@ -22,7 +22,7 @@ public class SpringBean implements BeanNameAware, BeanFactoryAware, ApplicationC
     @Override
     public void setBeanName(String s) {
 
-        System.out.println("Bean Name Aware >>" + s);
+        System.out.println("Bean Name Aware >> " + s);
 
     }
 
@@ -38,6 +38,6 @@ public class SpringBean implements BeanNameAware, BeanFactoryAware, ApplicationC
 
     @Override
     public void setApplicationContext(ApplicationContext applicationContext) throws BeansException {
-        System.out.println("Bean ApplicationContext Aware" + applicationContext);
+        System.out.println("Bean ApplicationContext Aware >>> " + applicationContext);
     }
 }

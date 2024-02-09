@@ -49,9 +49,11 @@ public class AppInitializer {
 
 //        acx.close();//applicationContext shutdown context
 //        acx.registerShutdownHook();//close context after shutdown JVM one moment
-
-
-
+        acx.registerShutdownHook();
+        boolean isExistJavaBeanDifinition = acx.containsBeanDefinition("getjavabean");
+        System.out.println(isExistJavaBeanDifinition);
+        boolean isExistBeanOneDifi = acx.containsBeanDefinition("SpringOne");
+        System.out.println(isExistJavaBeanDifinition);
 
 
     }

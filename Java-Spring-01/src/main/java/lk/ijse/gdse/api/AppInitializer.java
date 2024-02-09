@@ -61,8 +61,12 @@ public class AppInitializer {
         //defult name changing
 //        JavaBean bean = (JavaBean) acx.getBean("Javabean");
 //        System.out.println(bean);
+
         SpringOne bean = acx.getBean(SpringOne.class);
         System.out.println(bean);
+
+        SpringOne bean1 = acx.getBean(SpringOne.class);
+        System.out.println(bean1);
 
     }
 }

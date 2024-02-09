@@ -1,10 +1,9 @@
 package com.edu.ijse;
 
-
 import org.springframework.context.annotation.Scope;
 import org.springframework.stereotype.Component;
 
-@Scope
+@Scope("prototype")
 @Component
 public class SpringOne {
     public SpringOne() {

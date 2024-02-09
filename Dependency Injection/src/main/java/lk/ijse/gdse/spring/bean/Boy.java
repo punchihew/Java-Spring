@@ -31,26 +31,29 @@ public class Boy  implements BeanNameAware, BeanFactoryAware, ApplicationContext
 
     @Override
     public void setBeanFactory(BeanFactory beanFactory) throws BeansException {
-
+        System.out.println("Boy>> setBeanFactory...");
     }
 
     @Override
     public void setBeanName(String s) {
-
+        System.out.println("Boy >> setBeanName.....");
     }
 
     @Override
     public void destroy() throws Exception {
+        System.out.println("Boy >>> destroy...");
 
     }
 
     @Override
     public void afterPropertiesSet() throws Exception {
 
+        System.out.println("Boy >>> afterPropertiesSet...");
+
     }
 
     @Override
     public void setApplicationContext(ApplicationContext applicationContext) throws BeansException {
-
+        System.out.println("Boy >> setApplicationContext....");
     }
 }

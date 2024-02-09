@@ -15,10 +15,11 @@ import org.springframework.context.annotation.Configuration;
 @Configuration
 public class AppConfig {
 
-//    public AppConfig() {
-//        System.out.println("appConfig instance is created");
-//    }
-     @Bean// this is a bean definition
+    public AppConfig() {
+        System.out.println("appConfig instance is created");
+    }
+//     @Bean this is a bean definition  access modifier static and non access use karanna puluwan
+     @Bean(name = "Javabean")
     public JavaBean getjavabean(){
         return new JavaBean();
 

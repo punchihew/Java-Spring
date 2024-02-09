@@ -1,5 +1,7 @@
 package lk.ijse.gdse.api;
 
+import com.edu.ijse.JavaBean;
+import com.edu.ijse.SpringOne;
 import lk.ijse.gdse.api.bean.SpringBean;
 import lk.ijse.gdse.api.bean.SpringBean2;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
@@ -49,12 +51,18 @@ public class AppInitializer {
 
 //        acx.close();//applicationContext shutdown context
 //        acx.registerShutdownHook();//close context after shutdown JVM one moment
-        acx.registerShutdownHook();
-        boolean isExistJavaBeanDifinition = acx.containsBeanDefinition("getjavabean");
-        System.out.println(isExistJavaBeanDifinition);
-        boolean isExistBeanOneDifi = acx.containsBeanDefinition("SpringOne");
-        System.out.println(isExistJavaBeanDifinition);
 
+          //explicitly concept
+        acx.registerShutdownHook();
+//        boolean isExistJavaBeanDifinition = acx.containsBeanDefinition("getjavabean");
+//        System.out.println(isExistJavaBeanDifinition);
+//        boolean isExistBeanOneDifi = acx.containsBeanDefinition("SpringOne");
+//        System.out.println(isExistJavaBeanDifinition);
+        //defult name changing
+//        JavaBean bean = (JavaBean) acx.getBean("Javabean");
+//        System.out.println(bean);
+        SpringOne bean = acx.getBean(SpringOne.class);
+        System.out.println(bean);
 
     }
 }

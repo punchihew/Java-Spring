@@ -1,5 +1,6 @@
 package lk.ijse.gdse.spring.bean;
 
+import lk.ijse.gdse.spring.util.Injector;
 import org.springframework.beans.BeansException;
 import org.springframework.beans.factory.*;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -10,10 +11,20 @@ import org.springframework.stereotype.Component;
 import javax.annotation.PostConstruct;
 
 @Component("lahiru")
-public class Boy  implements BeanNameAware, BeanFactoryAware, ApplicationContextAware, InitializingBean, DisposableBean {
+public class Boy  implements Injector, BeanNameAware, BeanFactoryAware, ApplicationContextAware, InitializingBean, DisposableBean {
+   //property field injections
+//    @Autowired
+//    private GoodGirl goodGirl;
 
-    @Autowired
+  //spring setter methoad injection
+//    private GoodGirl goodGirl;
+//    @Autowired
+//    public void setGoodGirl(GoodGirl goodGirl){
+//        this.goodGirl = goodGirl;
+//    }
+
     private GoodGirl goodGirl;
+
 
     public Boy() {
         System.out.println("Boy Constructor");
@@ -21,6 +32,13 @@ public class Boy  implements BeanNameAware, BeanFactoryAware, ApplicationContext
 
         GoodGirl sachini = new Sachini();
         sachini.love();
+    }
+
+    @Autowired
+    @Override
+    public void inject(GoodGirl goodGirl) {
+        this.goodGirl = goodGirl;
+
     }
 
     @PostConstruct//popolete proprties eka gvawadi thamai add wenne controcter ekfi dd wenne nh depencies injectionn
@@ -56,4 +74,6 @@ public class Boy  implements BeanNameAware, BeanFactoryAware, ApplicationContext
     public void setApplicationContext(ApplicationContext applicationContext) throws BeansException {
         System.out.println("Boy >> setApplicationContext....");
     }
+
+
 }

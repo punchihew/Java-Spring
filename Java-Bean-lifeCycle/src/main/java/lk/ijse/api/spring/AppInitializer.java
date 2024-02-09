@@ -8,6 +8,7 @@ public class AppInitializer {
          AnnotationConfigApplicationContext acx = new AnnotationConfigApplicationContext();
          acx.register(AppConfig.class);
          acx.refresh();
+         acx.close();
 
 
     }

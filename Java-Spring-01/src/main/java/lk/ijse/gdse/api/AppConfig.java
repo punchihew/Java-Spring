@@ -1,5 +1,6 @@
 package lk.ijse.gdse.api;
 
+import com.edu.ijse.JavaBean;
 import com.edu.ijse.SpringOne;
 import lk.ijse.gdse.api.bean.SpringBean;
 import org.springframework.context.annotation.ComponentScan;
@@ -12,7 +13,12 @@ import org.springframework.context.annotation.Configuration;
 @Configuration
 public class AppConfig {
 
-    public AppConfig() {
-        System.out.println("appConfig instance is created");
+//    public AppConfig() {
+//        System.out.println("appConfig instance is created");
+//    }
+
+    public JavaBean getjavabean(){
+        return new JavaBean();
+
     }
 }

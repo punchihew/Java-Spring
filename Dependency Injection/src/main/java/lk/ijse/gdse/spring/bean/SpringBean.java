@@ -14,22 +14,26 @@ public class SpringBean {
 //        System.out.println(Arrays.toString(nameList));
 //    }
 
-//    @Autowired
 //    public SpringBean(Map<String,String> nameList) {
 //        System.out.println("SpringBean() -- Constructor---" + nameList);
 //        System.out.println(nameList);
 //    }
 
-//    @Autowired
+//    @Autowired no need why this using contractor Autowired using Methoads
 //    public SpringBean(List<String> nameList) {
 //        System.out.println("SpringBean() -- Constructor---" + nameList);
 //        System.out.println(nameList);
 //    }
 
-    @Autowired
-    public SpringBean(Set<String> nameList) {
+//    public SpringBean(Set<String> nameList) {
+//        System.out.println("SpringBean() -- Constructor---" + nameList);
+//        System.out.println( nameList);
+//    }
+
+    public SpringBean(Collection<String> nameList) {
         System.out.println("SpringBean() -- Constructor---" + nameList);
         System.out.println( nameList);
     }
+
 
 }

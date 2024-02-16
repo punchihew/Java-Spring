@@ -4,6 +4,6 @@ public class Tharushi implements GoodGirl {
 
     @Override
     public void love() {
-
+        System.out.println("Tharushi Lovers Him So Much");
     }
 }

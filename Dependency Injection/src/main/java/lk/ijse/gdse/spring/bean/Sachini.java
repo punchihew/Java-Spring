@@ -14,7 +14,7 @@ public class Sachini  implements GoodGirl, BeanNameAware, BeanFactoryAware, Appl
 
     @Override
     public void love() {
-        System.out.println("Sachini Constructor");
+        System.out.println("Sachini Love Him");
     }
 
     @Override

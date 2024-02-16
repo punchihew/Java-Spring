@@ -48,7 +48,7 @@ public class Boy  implements  BeanNameAware, BeanFactoryAware, ApplicationContex
     private GoodGirl goodGirl;
 
   @Autowired
-    public Boy( Sachini girl) {
+    public Boy( GoodGirl girl) {
         this.goodGirl = girl;
         System.out.println("Boy Constructor");
         System.out.println("Constructor Have I Got aGirl Friend..." + girl);

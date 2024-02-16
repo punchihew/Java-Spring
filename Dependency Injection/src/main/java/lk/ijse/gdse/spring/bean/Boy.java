@@ -16,7 +16,7 @@ import org.springframework.stereotype.Component;
 import javax.annotation.PostConstruct;
 
 @Component("lahiru")
-@Scope(ConfigurableBeanFactory.SCOPE_SINGLETON)
+@Scope(ConfigurableBeanFactory.SCOPE_PROTOTYPE)
 public class Boy  implements  BeanNameAware, BeanFactoryAware, ApplicationContextAware, InitializingBean, DisposableBean {
    //property field injections
 

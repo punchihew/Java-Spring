@@ -11,7 +11,7 @@ import org.springframework.stereotype.Component;
 import javax.annotation.PostConstruct;
 
 @Component("lahiru")
-public class Boy  implements Injector, BeanNameAware, BeanFactoryAware, ApplicationContextAware, InitializingBean, DisposableBean {
+public class Boy  implements  BeanNameAware, BeanFactoryAware, ApplicationContextAware, InitializingBean, DisposableBean {
    //property field injections
 //    @Autowired
 //    private GoodGirl goodGirl;
@@ -43,22 +43,28 @@ public class Boy  implements Injector, BeanNameAware, BeanFactoryAware, Applicat
 //    }
 
     //Constructor Injection
+
+    private GoodGirl goodGirl;
+
+    @Autowired
     public Boy( Sachini girl) {
+        this.goodGirl = girl;
         System.out.println("Boy Constructor");
         System.out.println("Constructor Have I Got aGirl Friend..." + girl);
+        girl.love();
 
-        GoodGirl sachini = new Sachini();
-        sachini.love();
+//        GoodGirl sachini = new Sachini();
+//        sachini.love();
     }
 
     //interface injection
-    private GoodGirl goodGirl;
 
-    @Override
-    public void inject(GoodGirl goodGirl) {
-        this.goodGirl = goodGirl;
-
-    }
+//
+//    @Override
+//    public void inject(GoodGirl goodGirl) {
+//        this.goodGirl = goodGirl;
+//
+//    }
 
 
 

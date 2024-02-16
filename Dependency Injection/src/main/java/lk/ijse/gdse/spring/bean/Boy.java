@@ -46,15 +46,17 @@ public class Boy  implements  BeanNameAware, BeanFactoryAware, ApplicationContex
 
     private GoodGirl goodGirl;
 
-    @Autowired
+  @Autowired
     public Boy( Sachini girl) {
         this.goodGirl = girl;
         System.out.println("Boy Constructor");
         System.out.println("Constructor Have I Got aGirl Friend..." + girl);
         girl.love();
-
 //        GoodGirl sachini = new Sachini();
 //        sachini.love();
+    }
+    public Boy(){
+        System.out.println("Boy() - Contractor");
     }
 
     //interface injection
@@ -93,8 +95,7 @@ public class Boy  implements  BeanNameAware, BeanFactoryAware, ApplicationContex
     @Override
     public void afterPropertiesSet() throws Exception {
 
-        System.out.println("Boy >>> afterPropertiesSet...");
-
+//        System.out.println("Boy >>> afterPropertiesSet...");
     }
 
     @Override

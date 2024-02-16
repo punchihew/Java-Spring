@@ -13,6 +13,7 @@ import javax.annotation.PostConstruct;
 @Component("lahiru")
 public class Boy  implements  BeanNameAware, BeanFactoryAware, ApplicationContextAware, InitializingBean, DisposableBean {
    //property field injections
+
 //    @Autowired
 //    private GoodGirl goodGirl;
 

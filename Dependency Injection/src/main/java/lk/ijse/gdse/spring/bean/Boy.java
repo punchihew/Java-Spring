@@ -1,6 +1,7 @@
 package lk.ijse.gdse.spring.bean;
 
 import lk.ijse.gdse.spring.util.Injector;
+import lk.ijse.gdse.spring.util.WhiteFace;
 import org.springframework.beans.BeansException;
 import org.springframework.beans.factory.*;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -49,7 +50,7 @@ public class Boy  implements  BeanNameAware, BeanFactoryAware, ApplicationContex
     private GoodGirl goodGirl;
 
   @Autowired
-    public Boy(@Qualifier("Long Hair") GoodGirl girl) {
+    public Boy(@Qualifier("Long Hair")  @WhiteFace GoodGirl girl) {
         this.goodGirl = girl;
         System.out.println("Boy Constructor");
         System.out.println("Constructor Have I Got aGirl Friend..." + girl);

@@ -1,5 +1,6 @@
 package lk.ijse.gdse.spring.bean;
 
+import lk.ijse.gdse.spring.util.WhiteFace;
 import org.springframework.beans.BeansException;
 import org.springframework.beans.factory.*;
 import org.springframework.beans.factory.annotation.Qualifier;
@@ -11,6 +12,7 @@ import org.springframework.stereotype.Component;
 @Component
 @Primary
 @Qualifier("Long Hair")
+@WhiteFace
 public class Sachini  implements GoodGirl, BeanNameAware, BeanFactoryAware, ApplicationContextAware, InitializingBean, DisposableBean {
     public Sachini() {
 

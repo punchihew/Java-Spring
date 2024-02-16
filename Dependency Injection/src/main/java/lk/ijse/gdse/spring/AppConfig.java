@@ -3,6 +3,7 @@ package lk.ijse.gdse.spring;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
+import org.springframework.context.annotation.Primary;
 
 
 @ComponentScan
@@ -17,4 +18,16 @@ public class AppConfig {
           return "IJSE";
       }
 
+    @Bean
+    public String myString2(){
+        return "ESOFT";
     }
+
+    @Bean
+    @Primary
+    public String myString3(){
+        return "SLIIT";
+    }
+
+
+}

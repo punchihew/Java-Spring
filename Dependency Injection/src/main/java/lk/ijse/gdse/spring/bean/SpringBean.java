@@ -6,6 +6,7 @@ import org.springframework.stereotype.Component;
 public class SpringBean {
 
     public SpringBean(String name) {
-        System.out.println("SpringBean() -- Constructor");
+        System.out.println("SpringBean() -- Constructor---" + name);
     }
+
 }

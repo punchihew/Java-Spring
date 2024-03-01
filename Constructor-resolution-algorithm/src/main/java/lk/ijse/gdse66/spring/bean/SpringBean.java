@@ -18,5 +18,7 @@ public class SpringBean {
         this.name = name;
         this.age = age;
         this.isMale = isMale;
+        System.out.println("SpringBean(String,int,boolean");
+        System.out.printf("name=%s,age=%s,isMale=%s\n",name,age,isMale);
     }
 }

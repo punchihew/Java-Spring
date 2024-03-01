@@ -17,8 +17,15 @@ public class AppConfig {
         return "amal";
     }
 
+
+    @Bean
     public Integer myInt(){
         return 21;
+    }
+
+    @Bean
+    public boolean myBoolean(){
+        return true;
     }
 
 }

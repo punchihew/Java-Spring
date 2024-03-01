@@ -10,8 +10,16 @@ public class HelloWebMvc {
     public HelloWebMvc() {
         System.out.println("HelloWebMvc RestController");
     }
+    //request handle
+//    @GetMapping
+//    public void myMethoad(){
+//        System.out.println("myMethod Is Invoke ()");
+//    }
+
+    //response handle
     @GetMapping
-    public void myMethoad(){
-        System.out.println("myMethod Invoke");
+    public String myMethoad(){
+        System.out.println("myMethod Is Invoke ()");
+        return "myMethoad";
     }
 }

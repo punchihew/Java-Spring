@@ -11,7 +11,7 @@ import org.springframework.web.bind.annotation.RestController;
 
 //@Component
 //@Controller
-@RestController //spring bean bean ekk hadala context ekata dagannwa
+//@RestController //spring bean bean ekk hadala context ekata dagannwa
 public class SpringBean implements BeanNameAware, BeanFactoryAware, ApplicationContextAware, InitializingBean, DisposableBean {
     public SpringBean() {
         System.out.println("SpringBean()");

@@ -4,6 +4,9 @@ import org.springframework.web.servlet.support.AbstractAnnotationConfigDispatche
 
 public class WebAppInitializer extends AbstractAnnotationConfigDispatcherServletInitializer {
 
+    public WebAppInitializer() {
+        System.out.println("WebAppInitializer () -- Contractor");
+    }
 
     @Override//context eka hadagnna awasha details
     protected Class<?>[] getRootConfigClasses() {

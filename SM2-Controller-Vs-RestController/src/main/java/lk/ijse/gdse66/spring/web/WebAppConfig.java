@@ -8,5 +8,7 @@ import org.springframework.web.servlet.config.annotation.EnableWebMvc;
 @ComponentScan
 @EnableWebMvc
 public class WebAppConfig {
-
+    public WebAppConfig() {
+        System.out.println("WebAppConfig () -- Contractor");
+    }
 }

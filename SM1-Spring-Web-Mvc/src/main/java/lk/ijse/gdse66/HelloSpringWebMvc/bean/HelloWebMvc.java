@@ -1,8 +1,6 @@
 package lk.ijse.gdse66.HelloSpringWebMvc.bean;
 
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 @RestController
 @RequestMapping("/hello")
@@ -17,9 +15,34 @@ public class HelloWebMvc {
 //    }
 
     //response handle
-    @GetMapping
-    public String myMethoad(){
-        System.out.println("myMethod Is Invoke ()");
-        return "myMethoad";
+//    @GetMapping
+//    public String myMethoad(){
+//        System.out.println("myMethod Is Invoke ()");
+//        return "myMethoadGet";
+//    }
+
+//    @PostMapping
+//    public void myMethoad(){
+//        System.out.println("myMethod Is Invoke ()");
+////        return "myMethoadGet";
+//    }
+
+//    @PostMapping
+//    public String myMethoad(){
+//        System.out.println("myMethod 1 Is Invoke ()");
+//        return "myMethoadPost";
+//    }
+//    @PostMapping("/two")
+//    public String myMethoad2(){
+//        System.out.println("myMethod 2  Is Invoke ()");
+//        return "myMethoadPost";
+//    }
+
+    @DeleteMapping
+    public String myMethoad2(){
+        System.out.println("myMethod 2  Is Invoke ()");
+        return "myMethoadDelete";
     }
+
+
 }

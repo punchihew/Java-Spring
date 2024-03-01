@@ -5,17 +5,17 @@ import org.springframework.web.servlet.support.AbstractAnnotationConfigDispatche
 public class WebAppInitializer extends AbstractAnnotationConfigDispatcherServletInitializer {
 
 
-    @Override
+    @Override//context eka hadagnna awasha details
     protected Class<?>[] getRootConfigClasses() {
         return new Class[]{WebRootConfig.class};
     }
 
-    @Override
+    @Override//context eka hadagnna awasha details
     protected Class<?>[] getServletConfigClasses() {
         return new Class[]{WebAppConfig.class};
     }
 
-    @Override
+    @Override//
     protected String[] getServletMappings() {
         return new String[]{"/"}; //default mapping
     }

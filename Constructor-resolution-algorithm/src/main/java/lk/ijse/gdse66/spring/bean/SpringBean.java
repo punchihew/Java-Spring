@@ -28,6 +28,7 @@ public class SpringBean {
     }
 
     //full args contractor
+    //same satisfy paramete  rs thiyenm random thamai spring contractor eka ganne
     @Autowired(required = false)
     public SpringBean(String name, int age, boolean isMale,@Nullable float temp) {
         this.name = name;

@@ -10,7 +10,7 @@ import org.springframework.web.bind.annotation.RestController;
 @RequestMapping("/customers")
 public class CustomerController {
 
-    @GetMapping
+    @GetMapping/*Path veritable get value*/
     public String getCustomers(){
         return "Get Customers Controller";
     }

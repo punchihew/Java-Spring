@@ -1,6 +1,7 @@
 package lk.ijse.gdse66.Spring.api;
 
 import org.springframework.http.MediaType;
+import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
@@ -26,5 +27,13 @@ public class ItemController {
     @PostMapping(consumes = MediaType.APPLICATION_FORM_URLENCODED_VALUE)
     public String SaveItemUrl(){
         return "SaveItemMultipal() i accept only application/url";
+    }
+
+
+    /*------------produces-------------*/
+
+    @GetMapping(produces = MediaType.APPLICATION_JSON_VALUE)
+    public String GetAllItem(){
+        return "GetAllItem";
     }
 }

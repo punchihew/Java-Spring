@@ -13,7 +13,7 @@ public class MyControllerTwo {
 
     @GetMapping
     public String getMethod(){
-        return "MyControllerTwo";
+        return "index";
     }
 }
 

@@ -20,4 +20,27 @@ public class MappingSpecController {
     public String getMethoad2(){
         return "Mapping Spec Controller";
     }
+
+           /* pathMapping */
+    @GetMapping(path = "/hello/gdse") //path segment(/hello)
+    public String getMethoad3(){
+        return " Path Mapping ";
+    }
+
+
+          /* Character Mapping */
+ /*   @GetMapping(path = "/hello/gdse?") */
+/*    @GetMapping(path = "/hello/gdse???") */
+    @GetMapping(path = "/hello/gd?se")
+    public String getMethoad4(){
+        return "Character Mapping";
+    }
+
+
+       /*WildCrad Mapping*/
+
+    @GetMapping(path = "/hello/gdse")
+    public String getMethoad5(){
+        return "Character Mapping";
+    }
 }

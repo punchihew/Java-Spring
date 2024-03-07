@@ -37,7 +37,12 @@ public class ItemController {
 //        return "GetAllItem";
 //    }
 
-    @GetMapping(produces = MediaType.APPLICATION_JSON_VALUE,consumes = MediaType.APPLICATION_JSON_VALUE)
+//    @GetMapping(produces = MediaType.APPLICATION_JSON_VALUE,consumes = MediaType.APPLICATION_JSON_VALUE)
+//    public String GetAllItem(){
+//        return "GetAllItem";
+//    }
+
+    @GetMapping(headers = {"MediaType.APPLICATION_JSON_VALUE,consumes = MediaType.APPLICATION_JSON_VALUE"})
     public String GetAllItem(){
         return "GetAllItem";
     }

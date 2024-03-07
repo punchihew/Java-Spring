@@ -38,9 +38,10 @@ public class MappingSpecController {
 
 
        /*WildCrad Mapping*/
-
-    @GetMapping(path = "/hello/gdse")
+     /*any only one segment */
+    /*@GetMapping(path = "/hello/gdse/*")*/
+    @GetMapping(path = "/hello/*/gdse")
     public String getMethoad5(){
-        return "Character Mapping";
+        return "WildCard Mapping";
     }
 }

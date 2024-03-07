@@ -17,18 +17,18 @@ public class Json_Reqest {
 //    }
 
 //    @PostMapping
-//    public String SaveCustomer(@RequestBody CustomerDto customer){
-//        return customer.toString();
+//    public CustomerDto SaveCustomer(@RequestBody CustomerDto customer){
+//        return customer;
+//    }
+
+//
+//    @GetMapping(produces = "application/json")
+//    public CustomerDto getSuplier(){
+//        return new CustomerDto("C001","Navishka",20);
 //    }
 
 
-    @GetMapping(produces = "application/json")
-    public CustomerDto getSuplier(){
-        return new CustomerDto("C001","Navishka",20);
-    }
-
-
-    @GetMapping(produces = MediaType.APPLICATION_JSON_VALUE)
+        @GetMapping(produces = MediaType.APPLICATION_JSON_VALUE)
     public ArrayList<CustomerDto> GetAllSuplier(){
         ArrayList<CustomerDto> customerDtos = new ArrayList<>();
         customerDtos.add(new CustomerDto("C001","Navishka",20));

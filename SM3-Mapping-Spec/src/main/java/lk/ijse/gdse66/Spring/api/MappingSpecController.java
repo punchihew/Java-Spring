@@ -22,7 +22,9 @@ public class MappingSpecController {
     }
 
            /* pathMapping */
-    @GetMapping(path = "/hello/gdse") //path segment(/hello)
+    /*http://localhost:8080/app/customer/hello/gdse///////*/
+
+    @GetMapping(path = "/hello/gdse")
     public String getMethoad3(){
         return " Path Mapping ";
     }
@@ -31,6 +33,7 @@ public class MappingSpecController {
           /* Character Mapping */
  /*   @GetMapping(path = "/hello/gdse?") */
 /*    @GetMapping(path = "/hello/gdse???") */
+
     @GetMapping(path = "/hello/gd?se")
     public String getMethoad4(){
         return "Character Mapping";
@@ -38,8 +41,11 @@ public class MappingSpecController {
 
 
        /*WildCrad Mapping*/
+/*http://localhost:8080/app/customer/hello/ab/gdse  */
+/*http://localhost:8080/app/customer/hello/ab/gdse///////*/
      /*any only one segment */
     /*@GetMapping(path = "/hello/gdse/*")*/
+
     @GetMapping(path = "/hello/*/gdse")
     public String getMethoad5(){
         return "WildCard Mapping";

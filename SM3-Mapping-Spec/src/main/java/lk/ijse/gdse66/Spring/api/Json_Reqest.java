@@ -12,7 +12,7 @@ import org.springframework.web.bind.annotation.RestController;
 public class Json_Reqest {
 
     @PostMapping
-    public String SaveCustomer(@ModelAttribute CustomerDto customer){
-        return customer.toString();
+    public String SaveCustomer(String id , String name , int age){
+        return String.format("SaveCustomer(String id , String name , int age) : %s.%s.%s",id,name,age);
     }
 }

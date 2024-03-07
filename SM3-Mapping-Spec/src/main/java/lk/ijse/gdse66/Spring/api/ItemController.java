@@ -42,7 +42,7 @@ public class ItemController {
 //        return "GetAllItem";
 //    }
 
-    @GetMapping(headers = {"MediaType.APPLICATION_JSON_VALUE,consumes = MediaType.APPLICATION_JSON_VALUE"})
+    @GetMapping(headers = {"produces = application.xml,consumes = MediaType.APPLICATION_JSON_VALUE"} , path = "/hedaer")
     public String GetAllItem(){
         return "GetAllItem";
     }

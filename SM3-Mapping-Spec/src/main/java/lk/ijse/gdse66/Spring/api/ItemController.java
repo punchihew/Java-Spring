@@ -32,7 +32,12 @@ public class ItemController {
 
     /*------------produces-------------*/
 
-    @GetMapping(produces = MediaType.APPLICATION_JSON_VALUE)
+//    @GetMapping(produces = MediaType.APPLICATION_JSON_VALUE)
+//    public String GetAllItem(){
+//        return "GetAllItem";
+//    }
+
+    @GetMapping(produces = MediaType.APPLICATION_JSON_VALUE,consumes = MediaType.APPLICATION_JSON_VALUE)
     public String GetAllItem(){
         return "GetAllItem";
     }

@@ -40,14 +40,34 @@ public class MappingSpecController {
     }
 
 
-       /*WildCrad Mapping*/
+    /*WildCrad Mapping -------  */   /*any only one segment */
+
 /*http://localhost:8080/app/customer/hello/ab/gdse  */
 /*http://localhost:8080/app/customer/hello/ab/gdse///////*/
-     /*any only one segment */
-    /*@GetMapping(path = "/hello/gdse/*")*/
+/* http://localhost:8080/app/customer/hello//sds/dsa/gdse*/
 
-    @GetMapping(path = "/hello/*/gdse")
+
+    /*@GetMapping(path = "/hello/gdse/*")*/
+//    @GetMapping(path = "/hello/*/gdse")
+    @GetMapping(path = "/hello/*/*/gdse")
     public String getMethoad5(){
         return "WildCard Mapping";
     }
+
+    /*http://localhost:8080/app/customer/gdsejjjj*/
+    @GetMapping(path = "/gdse*")
+    public String getMethoad6(){
+        return "WildCard Mapping Another Type";
+    }
+
+    /*Extension Mapping*/
+  /*  http://localhost:8080/app/customer/.php*/
+    @GetMapping(path = "/.php")
+    public String getMethoad7(){
+        return "Extension Mapping";
+    }
+
+
+
+
 }

@@ -22,9 +22,25 @@ public class ExtensionMapping {
 
      //path Segment walin ena value ekak ganna puluwan
   /*  http://localhost:8080/app/exten/matara*/
-        @GetMapping("/{city}") //path verible
-    public String getCustomersByCity( @PathVariable String city){
-        return String.format("getCustomersByCity(String city) :%s ",city);
-//        return "getCustomersByCity()";
+//        @GetMapping("/{city}") //path verible
+//    public String getCustomersByCity( @PathVariable String city){
+//        return String.format("getCustomersByCity(String city) :%s ",city);
+//    }
+
+    @GetMapping("/{city}/{name}") //path verible
+    public String getCustomersByCity2( @PathVariable String city ,@PathVariable String name){
+        return String.format("getCustomersByCity(String city,String name) :%s,%s ",city,name);
     }
+
+    @GetMapping(value = "/{city}") //path verible
+    public String getCustomersByCity3( @PathVariable(name = "city") String CusCity){
+        return String.format("getCustomersByCity(String city) :%s",CusCity);
+    }
+
+    @GetMapping("/{id:C\\d{3}}")
+    public String getCustomerById(@PathVariable String id){
+        return String.format("getCustomerById(String Id) :%s",id);
+    }
+
+
 }

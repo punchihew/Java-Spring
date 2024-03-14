@@ -10,24 +10,24 @@ import org.springframework.web.bind.annotation.RestController;
 @RequestMapping("/item")
 public class ItemController {
 
-    @PostMapping(consumes = MediaType.APPLICATION_JSON_VALUE)
-    public String SaveItemJson(){
-        return "SaveItemJson() i accept only application/json";
-    }
-
-    @PostMapping(consumes = MediaType.APPLICATION_XML_VALUE)
-    public String SaveItemXmll(){
-        return "SaveItemMultipal()i accept only application/xml";
-    }
-
-    @PostMapping(consumes = MediaType.MULTIPART_FORM_DATA_VALUE)
-    public String SaveItemMultipalFormDeta(){
-        return "SaveItemMultipal() i accept only application/formData";
-    }
-    @PostMapping(consumes = MediaType.APPLICATION_FORM_URLENCODED_VALUE)
-    public String SaveItemUrl(){
-        return "SaveItemMultipal() i accept only application/url";
-    }
+//    @PostMapping(consumes = MediaType.APPLICATION_JSON_VALUE)
+//    public String SaveItemJson(){
+//        return "SaveItemJson() i accept only application/json";
+//    }
+//
+//    @PostMapping(consumes = MediaType.APPLICATION_XML_VALUE)
+//    public String SaveItemXmll(){
+//        return "SaveItemMultipal()i accept only application/xml";
+//    }
+//
+//    @PostMapping(consumes = MediaType.MULTIPART_FORM_DATA_VALUE)
+//    public String SaveItemMultipalFormDeta(){
+//        return "SaveItemMultipal() i accept only application/formData";
+//    }
+//    @PostMapping(consumes = MediaType.APPLICATION_FORM_URLENCODED_VALUE)
+//    public String SaveItemUrl(){
+//        return "SaveItemMultipal() i accept only application/url";
+//    }
 
 
     /*------------produces-------------*/
@@ -37,13 +37,17 @@ public class ItemController {
 //        return "GetAllItem";
 //    }
 
-    @GetMapping(produces = MediaType.APPLICATION_XML_VALUE,consumes = MediaType.APPLICATION_JSON_VALUE)
-    public String GetAllItem(){
-        return "GetAllItem";
-    }
-
-//    @GetMapping(headers = {"produces = application.xml,consumes = MediaType.APPLICATION_JSON_VALUE"} , path = "/hedaer")
+//    @GetMapping(produces = MediaType.APPLICATION_XML_VALUE,consumes = MediaType.APPLICATION_JSON_VALUE)
 //    public String GetAllItem(){
 //        return "GetAllItem";
 //    }
+
+//    @GetMapping(headers = {"content-type = application/json,consumes = MediaType.APPLICATION_JSON_VALUE"} , path = "/hedaer")
+//    public String GetAllItem(){
+//        return "GetAllItem";
+//    }
+    @GetMapping(headers = {"content-type = application/json","accept=application/xml"})
+    public String GetAllItem(){
+    return "GetAllItem";
+    }
 }

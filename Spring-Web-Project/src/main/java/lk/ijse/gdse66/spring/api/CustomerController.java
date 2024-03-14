@@ -8,7 +8,7 @@ import java.util.ArrayList;
 
 @CrossOrigin(origins = "*")
 @RestController
-@RequestMapping("/customers")
+@RequestMapping("/api/v1/customers")
 public class CustomerController {
 
 
@@ -31,6 +31,12 @@ public class CustomerController {
 
     @DeleteMapping("/{id}")
     public void deleteCustomer(@PathVariable("id") String id){
+        System.out.println(id);
+
+    }
+
+    @PutMapping
+    public void updateCustomer(@RequestBody String id){
         System.out.println(id);
 
     }

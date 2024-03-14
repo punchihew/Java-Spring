@@ -10,8 +10,16 @@ import org.springframework.web.bind.annotation.RestController;
 @RequestMapping("/orders")
 public class OrderController {
 
-    @GetMapping
-    public String Getorders(@RequestHeader String token){
+    /*http://localhost:8080/app/orders*/
+//    @GetMapping
+//    public String Getorders(@RequestHeader("X-token") String token){
+//        return String.format("Getorders(String Token) :%s",token);
+//    }
+
+    @GetMapping//required = false X-token have not definitely if not assign null
+    public String Getorders(@RequestHeader(value = "X-token",required = false) String token){
         return String.format("Getorders(String Token) :%s",token);
     }
+
+
 }

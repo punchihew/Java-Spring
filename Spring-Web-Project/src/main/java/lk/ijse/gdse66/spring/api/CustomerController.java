@@ -10,7 +10,7 @@ public class CustomerController {
 
 
     @GetMapping
-    public String gellAllCustomers(){
+    public String getAllCustomers(){
         return "Hi";
     }
 }

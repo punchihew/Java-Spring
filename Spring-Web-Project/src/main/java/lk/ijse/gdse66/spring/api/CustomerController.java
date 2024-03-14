@@ -11,6 +11,7 @@ public class CustomerController {
 
     @GetMapping
     public String getAllCustomers(){
+
         return "Hi";
     }
 }

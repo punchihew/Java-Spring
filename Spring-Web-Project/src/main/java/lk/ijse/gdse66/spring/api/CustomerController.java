@@ -28,6 +28,8 @@ public class CustomerController {
     public void saveCustomer(@RequestBody CustomerDto customer){
         System.out.println(customer);
     }
+
+    @DeleteMapping
     public void deleteCustomer(){
 
     }

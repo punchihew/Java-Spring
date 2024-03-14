@@ -35,8 +35,8 @@ public class CustomerController {
 
     }
 
-    @PutMapping
-    public void updateCustomer(@RequestBody String id){
+    @PatchMapping("/{id}")
+    public void updateCustomer(@PathVariable("id") String id){
         System.out.println(id);
 
     }

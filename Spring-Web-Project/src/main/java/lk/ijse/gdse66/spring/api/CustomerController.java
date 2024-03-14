@@ -36,8 +36,9 @@ public class CustomerController {
     }
 
     @PatchMapping("/{id}")
-    public void updateCustomer(@PathVariable("id") String id){
+    public void updateCustomer(@PathVariable("id") String id,@RequestBody CustomerDto customer){
         System.out.println(id);
+        System.out.println(customer);
 
     }
 }

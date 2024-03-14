@@ -28,4 +28,7 @@ public class CustomerController {
     public void saveCustomer(@RequestBody CustomerDto customer){
         System.out.println(customer);
     }
+    public void deleteCustomer(){
+
+    }
 }

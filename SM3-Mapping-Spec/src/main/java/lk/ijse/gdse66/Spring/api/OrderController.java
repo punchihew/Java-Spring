@@ -10,7 +10,7 @@ import org.springframework.web.bind.annotation.RestController;
 public class OrderController {
 
     @GetMapping
-    public String Getorders(){
-        return "GetOrders ()  ";
+    public String Getorders(String token){
+        return String.format("Getorders(String Token) :%s",token);
     }
 }

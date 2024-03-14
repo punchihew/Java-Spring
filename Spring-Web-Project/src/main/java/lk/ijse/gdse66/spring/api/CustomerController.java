@@ -35,10 +35,16 @@ public class CustomerController {
 
     }
 
-    @PatchMapping("/{id}")
+    @PatchMapping(value = "/{id}",consumes = MediaType.APPLICATION_JSON_VALUE)
     public void updateCustomer(@PathVariable("id") String id,@RequestBody CustomerDto customer){
         System.out.println(id);
         System.out.println(customer);
 
+    }
+
+    @GetMapping("/{id}")
+    public CustomerDto getCustomerDetails(@PathVariable("id") String id){
+
+        return new CustomerDto(id,"Navi","colomba");
     }
 }

@@ -15,6 +15,7 @@ public class CustomerController {
 
     @GetMapping(produces = MediaType.APPLICATION_JSON_VALUE)
     public ArrayList<CustomerDto> getAllCustomers(){
+
         ArrayList<CustomerDto> customerList = new ArrayList<>();
         customerList.add(new CustomerDto("C001","Navishka","Matara"));
         customerList.add(new CustomerDto("C002","lakshan","Galle"));

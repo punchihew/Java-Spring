@@ -37,13 +37,13 @@ public class ItemController {
 //        return "GetAllItem";
 //    }
 
-//    @GetMapping(produces = MediaType.APPLICATION_JSON_VALUE,consumes = MediaType.APPLICATION_JSON_VALUE)
-//    public String GetAllItem(){
-//        return "GetAllItem";
-//    }
-
-    @GetMapping(headers = {"produces = application.xml,consumes = MediaType.APPLICATION_JSON_VALUE"} , path = "/hedaer")
+    @GetMapping(produces = MediaType.APPLICATION_XML_VALUE,consumes = MediaType.APPLICATION_JSON_VALUE)
     public String GetAllItem(){
         return "GetAllItem";
     }
+
+//    @GetMapping(headers = {"produces = application.xml,consumes = MediaType.APPLICATION_JSON_VALUE"} , path = "/hedaer")
+//    public String GetAllItem(){
+//        return "GetAllItem";
+//    }
 }

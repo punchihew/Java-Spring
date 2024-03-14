@@ -7,7 +7,7 @@ import org.springframework.web.bind.annotation.RestController;
 @RequestMapping("/customers")
 public class CustomerController {
 
-    public String myMethoad(){
+    public String gellAllCustomers(){
         return "Hi";
     }
 }

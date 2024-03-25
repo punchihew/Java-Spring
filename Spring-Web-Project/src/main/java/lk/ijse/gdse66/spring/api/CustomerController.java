@@ -38,6 +38,7 @@ public class CustomerController {
 
     }
 
+    @ResponseStatus(HttpStatus.NO_CONTENT)
     @PatchMapping(value = "/{id}",consumes = MediaType.APPLICATION_JSON_VALUE)
     public void updateCustomer(@PathVariable("id") String id,@RequestBody CustomerDto customer){
         System.out.println(id);

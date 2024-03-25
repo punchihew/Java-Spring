@@ -1,6 +1,8 @@
 package lk.ijse.gdse66.spring.api;
 
 import lk.ijse.gdse66.spring.dto.CustomerDto;
+import lk.ijse.gdse66.spring.services.CustomerServicesImpl;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.MediaType;
 import org.springframework.web.bind.annotation.*;
@@ -12,6 +14,8 @@ import java.util.ArrayList;
 @RequestMapping("/api/v1/customers")
 public class CustomerController {
 
+    @Autowired
+    CustomerServicesImpl customerServices;
 
     @GetMapping(produces = MediaType.APPLICATION_JSON_VALUE)
     public ArrayList<CustomerDto> getAllCustomers(){

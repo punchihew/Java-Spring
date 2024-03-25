@@ -1,14 +1,19 @@
 package lk.ijse.gdse66.spring.services;
 
 import lk.ijse.gdse66.spring.dto.CustomerDto;
+import lk.ijse.gdse66.spring.repository.CustomerRepo;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Component;
 import org.springframework.stereotype.Service;
 
 import java.util.ArrayList;
 import java.util.List;
 
 @Service
-
 public class CustomerServicesImpl implements CustomerService{
+
+    @Autowired
+    CustomerRepo customerRepo;
 
     ArrayList<CustomerDto> customerList = new ArrayList<>();
 

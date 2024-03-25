@@ -9,10 +9,10 @@ import lombok.NoArgsConstructor;
 
 @Data
 @NoArgsConstructor
-@Entity
+@Entity  //entity represented
 @AllArgsConstructor
 public class customer {
-    @Id
+    @Id //primary key
     private String id;
     private String name;
     private String address;

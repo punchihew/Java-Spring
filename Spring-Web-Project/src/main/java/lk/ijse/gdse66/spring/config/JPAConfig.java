@@ -17,8 +17,8 @@ import org.springframework.transaction.annotation.EnableTransactionManagement;
 import javax.sql.DataSource;
 
 @Configuration
-@EnableJpaRepositories
-@EnableTransactionManagement
+@EnableJpaRepositories(basePackages = "lk.ijse.gdse66.spring.repository")
+@EnableTransactionManagement //truncation manger enable
 public class JPAConfig {
 
     @Bean
@@ -38,7 +38,7 @@ public class JPAConfig {
         vendorAdapter.setGenerateDdl(true);
         vendorAdapter.setShowSql(true);
         vendorAdapter.setDatabase(Database.MYSQL);
-        vendorAdapter.setDatabasePlatform("org.hibernate.dialect.MySql5Dialect");
+        vendorAdapter.setDatabasePlatform("org.hibernate.dialect.MySql8Dialect");
 
         LocalContainerEntityManagerFactoryBean factory = new LocalContainerEntityManagerFactoryBean();
         factory.setJpaVendorAdapter(vendorAdapter);

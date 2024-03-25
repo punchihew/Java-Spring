@@ -11,7 +11,7 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor
 @Entity  //entity represented
 @AllArgsConstructor
-public class customer {
+public class Customer {
     @Id //primary key
     private String id;
     private String name;

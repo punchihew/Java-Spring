@@ -5,7 +5,7 @@ import lk.ijse.gdse66.spring.dto.CustomerDto;
 import java.util.List;
 
 
-public interface CustomerService {
+public interface  CustomerService {
     List<CustomerDto> getAllCustomers();
 
     CustomerDto getCustomerDetails(String id);

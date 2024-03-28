@@ -17,7 +17,7 @@ public class CustomerDto implements Serializable {
     @Null(message = "Id Is Auto Generated")
     private String id;
     @NotBlank(message = "Name Cannot Been Null")
-    @Pattern(regexp = "[A-Za-z+]", message = "Name IS Not Validated")
+//    @Pattern(regexp = "[A-Za-z]+$", message = "Name IS Not Validated")
     private String name;
     @NotBlank(message = "Address Cannot Been Null")
     private String address;

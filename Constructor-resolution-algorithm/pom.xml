@@ -8,7 +8,7 @@
     <artifactId>Constructor-resolution-algorithm</artifactId>
     <version>1.0-0</version>
 
-    <packaging>war</packaging>
+    <packaging>jar</packaging>
 
     <properties>
         <maven.compiler.source>11</maven.compiler.source>

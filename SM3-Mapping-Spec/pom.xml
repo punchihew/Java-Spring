@@ -5,7 +5,7 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>org.example</groupId>
-    <artifactId>SM3-Mapping-Spec</artifactId>
+    <artifactId>SM3-Mapping-Spec</artifactId> <!--war file set the name using artifactID = War file Name-->
     <version>1.0-0</version>
 
     <packaging>war</packaging>

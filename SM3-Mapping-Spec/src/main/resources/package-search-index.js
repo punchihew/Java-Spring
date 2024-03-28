@@ -1,0 +1,1 @@
+packageSearchIndex = [{"l":"All Packages","url":"allpackages-index.html"},{"l":"lk.ijse.gdse66.Spring"},{"l":"lk.ijse.gdse66.Spring.api"},{"l":"lk.ijse.gdse66.Spring.dto"}]

@@ -37,5 +37,10 @@ public class SpringBean {
 //        System.out.println( nameList);
 //    }
 
+    //    public SpringBean(List<Goodgirl> nameList) {
+//        System.out.println("SpringBean() -- Constructor---" + nameList);
+//        System.out.println(nameList);
+//    }
+
 
 }

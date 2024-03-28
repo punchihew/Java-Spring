@@ -3,6 +3,7 @@ package lk.ijse.gdse66.spring.service.impl;
 import lk.ijse.gdse66.spring.dto.CustomerDto;
 import lk.ijse.gdse66.spring.entity.Customer;
 import lk.ijse.gdse66.spring.repositories.CustomerRepo;
+import lk.ijse.gdse66.spring.service.exception.NotFoundException;
 import lk.ijse.gdse66.spring.service.util.Transformer;
 import lk.ijse.gdse66.spring.service.util.UtilMatter;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -43,7 +44,7 @@ public class CustomerServiceImpl implements lk.ijse.gdse66.spring.service.Custom
     public CustomerDto getCustomerDetails(String id) {
 
         if (!repo.existsById(id)){
-            throw new RuntimeException("Customer Id :" + id +"Dones not exis");
+            throw new NotFoundException("Customer Id :" + id +"Dones not exis");
         }
         return transformer.fromCustomerEntity(repo.findById(id).get());
     }
@@ -58,7 +59,7 @@ public class CustomerServiceImpl implements lk.ijse.gdse66.spring.service.Custom
     @Override
     public void updateCustomer(CustomerDto customerDTO) {
         if (!repo.existsById(customerDTO.getId())){
-            throw new RuntimeException("Update Filled Id :" + customerDTO.getId() +"Does not exist");
+            throw new NotFoundException("Update Filled Id :" + customerDTO.getId() +"Does not exist");
         }
         repo.save(transformer.toCustomerEntity(customerDTO));
     }
@@ -66,7 +67,7 @@ public class CustomerServiceImpl implements lk.ijse.gdse66.spring.service.Custom
     @Override
     public void deleteCustomer(String id) {
         if (!repo.existsById(id)){
-            throw new RuntimeException("Delete Filled Id :" + id +"Does not exist");
+            throw new NotFoundException("Delete Filled Id :" + id +"Does not exist");
         }
         repo.deleteById(id);
     }

@@ -39,6 +39,7 @@ public class CustomerController {
     @ResponseStatus(HttpStatus.NO_CONTENT)
     public void updateCustomer(@PathVariable("id") String id,
                               @Valid @RequestBody CustomerDto customer){
+        customer.setId(id);
         customerService.updateCustomer(customer);
     }
 

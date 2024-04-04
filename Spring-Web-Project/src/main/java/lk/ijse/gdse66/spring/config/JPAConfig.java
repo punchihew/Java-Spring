@@ -29,6 +29,10 @@ public class JPAConfig {
 
     Environment env;
 
+    public JPAConfig(Environment env) {
+        this.env = env;
+    }
+
     @Bean
     public DataSource dataSource() {
 

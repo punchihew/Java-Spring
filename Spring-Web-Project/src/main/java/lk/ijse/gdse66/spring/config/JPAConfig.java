@@ -31,6 +31,7 @@ public class JPAConfig {
 
     @Bean
     public DataSource dataSource() {
+
         DriverManagerDataSource dmds = new DriverManagerDataSource();
         dmds.setUrl(env.getRequiredProperty("spring.datasource.url"));
         dmds.setUsername(env.getRequiredProperty("spring.datasource.username"));

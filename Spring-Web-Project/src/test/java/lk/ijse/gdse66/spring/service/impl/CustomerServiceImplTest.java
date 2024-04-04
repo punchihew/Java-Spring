@@ -30,8 +30,9 @@ class CustomerServiceImplTest {
 
     @Test
     void saveCustomer() {
-        new CustomerDto("C001","navishka","Galle","Profilel");
-        CustomerDto customer = customerService.saveCustomer(CustomerDto);
+        CustomerDto customerDto = new CustomerDto("C001", "navishka", "Galle", "Profilel");
+        CustomerDto customer = customerService.saveCustomer(customerDto);
+
         
     }
 

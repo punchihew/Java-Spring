@@ -45,5 +45,19 @@ class CustomerRepoTest {
             System.out.println(customer);
         }
     }
+    @Test
+    void getCustomerAddress(){
+        addAllCustomers();
+        Customer customer = customerRepo.searchByNameAndAddress("Navishka","Matara");
+        System.out.println(customer);
+
+    }
+
+    @Test
+    void countCustomerByStartsWish(){
+        addAllCustomers();
+        int count = customerRepo.countCustomerByAddressStartsWith("Ma");
+        System.out.println(count);
+    }
 
 }

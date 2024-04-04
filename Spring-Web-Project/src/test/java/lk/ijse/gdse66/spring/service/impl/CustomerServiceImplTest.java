@@ -28,6 +28,10 @@ class CustomerServiceImplTest {
         return customerService.saveCustomer(customerDto);
     }
 
+    void AddAllCustomer(){
+
+    }
+
     @Test  //test case ekak
     void getAllCustomers() {
         assertNotEquals("null",customerService.getAllCustomers());
@@ -57,6 +61,7 @@ class CustomerServiceImplTest {
 
     @Test
     void updateCustomer() {
+        CustomerDto customerDto = addOnCustomer();
 
         assertThrows(NotFoundException.class, () ->customerService.updateCustomer(new CustomerDto("C001", "lakshan", "Galle", "Profilel")));
     }
@@ -64,7 +69,9 @@ class CustomerServiceImplTest {
 
     @Test
     void deleteCustomer() {
-      assertThrows(NotFoundException.class,() ->customerService.deleteCustomer("C001"));
+
+        CustomerDto customerDto = addOnCustomer();
+        assertThrows(NotFoundException.class,() ->customerService.deleteCustomer("C001"));
 
      }
 }

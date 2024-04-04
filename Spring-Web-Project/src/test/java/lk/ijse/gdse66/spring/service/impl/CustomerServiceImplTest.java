@@ -22,6 +22,11 @@ class CustomerServiceImplTest {
   
     @Autowired
     CustomerService customerService;
+    CustomerDto addOnCustomer(){
+
+        CustomerDto customerDto = new CustomerDto("C001", "Punchihewa", "Galle", "ProfilelUp");
+        return customerService.saveCustomer(customerDto);
+    }
 
     @Test  //test case ekak
     void getAllCustomers() {
@@ -61,6 +66,5 @@ class CustomerServiceImplTest {
     void deleteCustomer() {
       assertThrows(NotFoundException.class,() ->customerService.deleteCustomer("C001"));
 
-
-    }
+     }
 }

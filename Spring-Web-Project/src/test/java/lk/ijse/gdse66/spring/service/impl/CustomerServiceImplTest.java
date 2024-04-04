@@ -25,6 +25,7 @@ class CustomerServiceImplTest {
 
     @Test  //test case ekak
     void getAllCustomers() {
+        assertNotEquals("null",customerService.getAllCustomers());
 
     }
 

@@ -8,6 +8,8 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.junit.jupiter.SpringExtension;
 
+import java.util.List;
+
 import static org.junit.jupiter.api.Assertions.*;
 
 @ExtendWith({SpringExtension.class})
@@ -33,6 +35,11 @@ class CustomerRepoTest {
         Customer saveCustomer = customerRepo.save(customer);
 
         assertNotNull(saveCustomer);
+    }
+
+    void getCustomerByName(){
+       addAllCustomers();
+        List
     }
 
 }
